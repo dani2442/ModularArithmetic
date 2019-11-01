@@ -81,7 +81,7 @@ namespace math {
 		Decomposition dec;
 		int p = 2;
 		
-		while (p<=n) {
+		while (p<sqrt(n)) {
 
 			if (n % p == 0) {
 				dec.push_back({ p,0 });
@@ -92,6 +92,8 @@ namespace math {
 			}
 			p++;
 		}
+		if (n > 1)
+			dec.push_back({ n,1 });
 		return dec;
 	}
 
