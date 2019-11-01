@@ -143,6 +143,20 @@ namespace math {
 	// ...
 	// an*x = bn (mod mn)
 	std::vector<int> solve(std::vector<int>&a, std::vector<int>&b, std::vector<int>& m) {
-		return{};
+		int u, v;
+		int mn = m[0] * m[1];
+		bezout(m[0], m[1], u, v);
+		auto s0=solve(a[0], b[0], m[0]);
+		auto s1=solve(a[1], b[1], m[1]);
+		s0[0] = (s1[0] * m[0] * u + s0[0] * m[1] * v)%mn;
+
+		for (int i = 2; i < a.size(); i++) {
+			bezout(mn, m[i], u, v);
+			s1=solve(a[i], b[i], m[i]);
+			s0[0] = (s1[0] * mn * u + s0[0] * m[i] * v)%(mn*m[i]);
+			mn *= m[i];
+		}
+
+		return s0;
 	}
 }
