@@ -34,7 +34,7 @@ namespace math {
 	typedef std::vector<priv::p> Decomposition;
 
 	// GCD: Greatest Common Divisor
-	int mcd(int a, int b) {
+	int gcd(int a, int b) {
 		if (a > b) {
 			return priv::_mcd(a, b);
 		}
@@ -44,7 +44,7 @@ namespace math {
 	}
 
 	// LCM: Least Common Multiple
-	int mcm(int a, int b) {
+	int lcm(int a, int b) {
 		return a * b / mcd(a, b);
 	}
 
@@ -176,5 +176,22 @@ namespace math {
 			if (b <= 0)break;
 		}
 		return sol;
+	}
+
+	bool isPrime(int n) {
+		int i=2 ;
+		while (sqrt(n) > i) {
+			if (n % i==0)return false;
+			i++;
+		}
+		return true;
+	}
+
+	int nextPrime(int n) {
+		n = n % 2 == 0 ? n + 3 : n + 2;
+		while (true) {
+			if (isPrime(n))return n;
+			n += 2;
+		}
 	}
 }
