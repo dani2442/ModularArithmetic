@@ -3,8 +3,11 @@ This project pretends to unified every function that you will use in a cryptogra
 
 ## Getting Started
 You will find in the file: main.cpp example of every function that is implemented in this library.
+There is a description of each function in dprogrammer website. 
+[Modular Arithmetic documentation](http://dprogrammer.org/modular-arithmetic-library)
+[Modular Arithmetic article](http://dprogrammer.org/wp-content/uploads/2019/11/modularArithmetic.pdf)
 
-###Functions
+### Functions
 
 - Great Common Divisor (GCD)
 - Least Common Multiple (LCM)
