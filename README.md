@@ -1,4 +1,4 @@
-# ModularArithmetic
+# Modular Arithmetic Library in **C++**
 This project pretends to unified every function that you will use in a cryptography program.
 
 ## Getting Started
