@@ -161,4 +161,20 @@ namespace math {
 
 		return s0;
 	}
+
+	// Solves a^b (mod m)
+	int mod(int a,int b, int m) {
+		int sol = 1,accum=a;
+		for (int i = 31; i >=0; i--) {
+			if (b & 1)
+			{
+				sol = (sol * accum) % m;
+			}
+			b = b >> 1;
+			accum = (accum * accum) % m;
+
+			if (b <= 0)break;
+		}
+		return sol;
+	}
 }
