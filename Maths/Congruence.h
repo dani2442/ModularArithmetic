@@ -45,10 +45,10 @@ namespace math {
 
 	// LCM: Least Common Multiple
 	int lcm(int a, int b) {
-		return a * b / mcd(a, b);
+		return a * b / gcd(a, b);
 	}
 
-	// Solve mcd(a,b)= a*c + b*d for c and d
+	// Solve gcd(a,b)= a*c + b*d for c and d
 	void bezout(int a, int b, int& c, int& d) {
 		std::vector<int>v;
 		if (a > b) {
@@ -81,7 +81,7 @@ namespace math {
 		Decomposition dec;
 		int p = 2;
 		
-		while (p<sqrt(n)) {
+		while (p<=sqrt(n)) {
 
 			if (n % p == 0) {
 				dec.push_back({ p,0 });
@@ -112,7 +112,7 @@ namespace math {
 	// a^-1 mod(m)
 	int inverse(int a, int m) {
 		int u, v;
-		if (mcd(a, m) != 1) {
+		if (gcd(a, m) != 1) {
 			std::cout << "the number and mod must be coprimes\n";
 			return -1;
 		}
@@ -122,7 +122,7 @@ namespace math {
 
 	// solve ax=b (mod m)
 	std::vector<int> solve(int a, int b, int m) {
-		int d = mcd(a, m);
+		int d = gcd(a, m);
 		if (b % d != 0) {
 			std::cout << "There is no solution \n";
 			return {};
