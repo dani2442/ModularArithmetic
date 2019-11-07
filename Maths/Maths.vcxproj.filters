@@ -18,9 +18,21 @@
     <ClInclude Include="Congruence.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Cryptography.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Additive.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Diccionario.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Multiplicative.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="testCrypto.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

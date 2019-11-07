@@ -125,10 +125,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Additive.h" />
     <ClInclude Include="Congruence.h" />
+    <ClInclude Include="Cryptography.h" />
+    <ClInclude Include="Diccionario.h" />
+    <ClInclude Include="Multiplicative.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="testCrypto.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
