@@ -48,7 +48,7 @@ namespace math {
 		return a * b / gcd(a, b);
 	}
 
-	// Solve mcd(a,b)= a*c + b*d for c and d
+	// Solve gcd(a,b)= a*c + b*d for c and d
 	void bezout(int a, int b, int& c, int& d) {
 		std::vector<int>v;
 		if (a > b) {
@@ -81,7 +81,7 @@ namespace math {
 		Decomposition dec;
 		int p = 2;
 		
-		while (p<sqrt(n)) {
+		while (p<=sqrt(n)) {
 
 			if (n % p == 0) {
 				dec.push_back({ p,0 });
