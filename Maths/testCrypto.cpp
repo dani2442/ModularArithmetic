@@ -4,7 +4,6 @@
 
 int main() {
 	Additive add(4);
-
 	std::string texto1=add.encrypt("hola caracola");
 	std::cout<<add.decrypt(texto1)<<std::endl;
 
