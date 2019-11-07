@@ -22,3 +22,8 @@ There is a description of each function in dprogrammer website.
 - Inverse function
 - Solver for 1 equation
 - Solver for multiple equations
+
+## Cryptography
+This library is used to implement most powerful algorithms for encrypting and decrpyting. (this part is currently under development)
+-Additive
+-Multiplicative
