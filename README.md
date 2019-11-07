@@ -25,5 +25,5 @@ There is a description of each function in dprogrammer website.
 
 ## Cryptography
 This library is used to implement most powerful algorithms for encrypting and decrpyting. (this part is currently under development)
--Additive
--Multiplicative
+- Additive
+- Multiplicative
