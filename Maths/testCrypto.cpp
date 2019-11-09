@@ -1,5 +1,6 @@
 #include "Additive.h"
 #include "Multiplicative.h"
+#include "Exponential.h"
 #include <iostream>
 
 int main() {
@@ -10,6 +11,10 @@ int main() {
 	Multiplicative mul(5);
 	std::string texto2 = mul.encrypt("hello world");
 	std::cout << mul.decrypt(texto2)<<std::endl;
+
+	Exponential exp(7);
+	std::string texto3 = exp.encrypt("hallo wie geht");
+	std::cout << exp.decrypt(texto3);
 
 	getchar();
 }

@@ -30,6 +30,9 @@
     <ClInclude Include="Multiplicative.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Exponential.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="testCrypto.cpp">

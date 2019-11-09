@@ -14,7 +14,7 @@ public:
 	virtual bool setKey(int key) = 0;
 
 protected:
-	int key;
+	int key,dkey;
 	std::vector<int> text;
 };
 

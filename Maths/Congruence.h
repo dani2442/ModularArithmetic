@@ -2,8 +2,6 @@
 #include <vector>
 #include <iostream>
 
-#include <glm/glm.hpp>
-
 namespace math {
 	namespace priv {
 		struct p { int b, e; };
@@ -117,6 +115,7 @@ namespace math {
 			return -1;
 		}
 		bezout(m, a, u, v);
+		if (v < 0)v += m;
 		return v;
 	}
 
@@ -126,6 +125,9 @@ namespace math {
 		if (b % d != 0) {
 			std::cout << "There is no solution \n";
 			return {};
+		}
+		if (b < 0) {
+			b += m;
 		}
 
 		int an = a / d, bn = b / d, mn = m / d;

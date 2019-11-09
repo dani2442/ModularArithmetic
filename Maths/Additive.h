@@ -6,7 +6,7 @@ class Additive:public Cryptography
 {
 public:
 	Additive():Cryptography(){}
-	Additive(int key) { setKey(key); }
+	Additive(int key):Cryptography() { setKey(key); }
 
 	std::string encrypt(const std::string& textAscii) 
 	{ 
@@ -19,13 +19,17 @@ public:
 	std::string decrypt(const std::string& textAscii){
 		text = toNumber(textAscii);
 		for (int i = 0; i < text.size(); ++i) {
-			text[i] = (text[i] - key) % MOD;
+			text[i] = (text[i] +dkey) % MOD;
 			if (text[i] < 0)text[i] += MOD;
 		}
 		return toString(text);
 	}
 
-	bool setKey(int key) { this->key = key; return true; }
+	bool setKey(int key) { 
+		this->key = key; 
+		this->dkey = -key;
+		return true; 
+	}
 private:
 
 };

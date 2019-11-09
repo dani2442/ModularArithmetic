@@ -129,6 +129,7 @@
     <ClInclude Include="Congruence.h" />
     <ClInclude Include="Cryptography.h" />
     <ClInclude Include="Diccionario.h" />
+    <ClInclude Include="Exponential.h" />
     <ClInclude Include="Multiplicative.h" />
   </ItemGroup>
   <ItemGroup>

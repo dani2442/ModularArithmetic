@@ -19,16 +19,18 @@ public:
 	}
 	std::string decrypt(const std::string& textAscii){
 		text = toNumber(textAscii);
-		int decryptkey = math::inverse(key, MOD);
 		for (int i = 0; i < text.size(); ++i) {
-			text[i] = (text[i] *decryptkey) % MOD;
+			text[i] = (text[i] *dkey) % MOD;
 		}
 		return toString(text);
 	}
 
 	bool setKey(int key) {
-		if (math::gcd(key, MOD) == 1) { this->key = key; return true; }
-		else {
+		if (math::gcd(key, MOD) == 1) { 
+			this->key = key; 
+			this->dkey = math::inverse(key, MOD); 
+			return true; 
+		}else {
 			std::cout << "key not valid" << std::endl;
 			return false;
 		}
